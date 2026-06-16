@@ -21,20 +21,19 @@ if (isFocalApp()){
 }
 
 // PHP 8.5 ARRAY FUNCTIONS FOR PHP VERSIONS LOWER THAN 8.5
-if (version_compare(PHP_VERSION, "8.5.0", "<")){
-    function array_first(array $array):mixed{
+if (function_exists("array_first")){
+    function array_first(array $array): mixed{
         return Arr::first($array);
     }
-    function array_last(array $array):mixed{
+}
+if (function_exists("array_last")){
+    function array_last(array $array): mixed{
         return Arr::last($array);
     }
 }
 
 /**
  * Remove `$keys` from the `$array`
- * @param array $array
- * @param array $keys
- * @return array
  */
 function array_remove_keys(array $array, array $keys): array{
     return Arr::removeKeys($array, $keys);
