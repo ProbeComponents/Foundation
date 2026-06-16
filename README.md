@@ -1,0 +1,1 @@
+The helpers.php file breaks some codebases that utilise symfony packages but also breaks by default as fron 1.6.x (Could be even earlier) the package uses symfony components and some helper code was poorly written in the way that it causes runtime exceptions to be thrown due to improper handling of custom function declaration.
