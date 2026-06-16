@@ -21,12 +21,12 @@ if (isFocalApp()){
 }
 
 // PHP 8.5 ARRAY FUNCTIONS FOR PHP VERSIONS LOWER THAN 8.5
-if (function_exists("array_first")){
+if (!function_exists("array_first")){
     function array_first(array $array): mixed{
         return Arr::first($array);
     }
 }
-if (function_exists("array_last")){
+if (!function_exists("array_last")){
     function array_last(array $array): mixed{
         return Arr::last($array);
     }

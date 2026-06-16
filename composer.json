@@ -8,7 +8,7 @@
             "Probe\\": "./"
         },
         "files": [
-            "./helpers.php"
+            "helpers.php"
         ]
     },
     "authors": [
